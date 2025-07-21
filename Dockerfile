@@ -1,0 +1,1 @@
+FROM python:3.9-slim\nWORKDIR /app\nCOPY requirements.txt .\nRUN pip install -r requirements.txt\nCOPY . .\nEXPOSE 5000\nCMD ["gunicorn", "--bind", "0.0.0.0:5000", "src.sid.api:app"]

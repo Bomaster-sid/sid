@@ -1,0 +1,1 @@
+from simpleeval import simple_eval\ndef resolver_expressao_matematica(expressao_str):\n    try: return simple_eval(expressao_str)\n    except Exception as e: return f'Erro: {e}'
